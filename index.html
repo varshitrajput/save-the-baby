@@ -16,6 +16,9 @@
         <button onclick="startGame('medium')">Medium</button>
         <button onclick="startGame('impossible')">Impossible</button>
     </div>
+    <audio id="background-music" loop>
+        <source src="bgm.mp3" type="audio/mp3">
+    </audio>
     <div id="game" style="display: none;">
         <div id="score-display">Score: <span id="score_count">0</span></div>
         <div id="baby"><img src="blue.png" alt=""></div>
@@ -29,11 +32,15 @@
     <div id="result">
         <h1>Game Over</h1>
         <p id="score"></p>
-        <button id="btn" onclick="location.reload()">Restart</button>
+    <button id="btn" onclick="restartGame()">Restart</button>
     </div>
 
     <audio id="jumpsound" src="jumpsound.mp3"></audio>
     <audio id="squishsound" src="squishsound.mp3"></audio>
+        <audio id="gameoversound" src="gameoversound.mp3"></audio>
+            <audio id="driftsound" src="drift.mp3"></audio>
+
+
 
     <script src="main.js"></script>
 </body>
