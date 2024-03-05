@@ -58,7 +58,7 @@ setInterval(function kill (){
     var blueCarLeft = parseInt(window.getComputedStyle(blueCar3).getPropertyValue("left"));
     var raceCarLeft = parseInt(window.getComputedStyle(raceCar).getPropertyValue("left"));
     var raceCar2Left = parseInt(window.getComputedStyle(raceCar2).getPropertyValue("left"));
-    if(((blueCarLeft === raceCarLeft) || (blueCarLeft === raceCar2Left)) && (blueCarTop >= 525)){
+    if(((blueCarLeft === raceCarLeft) || (blueCarLeft === raceCar2Left)) && (blueCarTop == 525)){
 
         counter = counter + 5;
         squishsound.play();
