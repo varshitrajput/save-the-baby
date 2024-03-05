@@ -12,9 +12,34 @@ var counter = 0;
 var jumpsound = document.getElementById("jumpsound");
 var squishsound = document.getElementById("squishsound");
 
+let babyAnimationDuration = 1.5; // Default duration for baby
+let baby2AnimationDuration = 1.7; // Default duration for baby2
+
 
 
 setInterval(moveBackground, 200);
+
+
+function setDifficultyLevel(difficulty) {
+    switch (difficulty) {
+        case 'easy':
+            babyAnimationDuration = 3.0;
+            baby2AnimationDuration = 3.1;
+            break;
+        case 'medium':
+            babyAnimationDuration = 1.4;
+            baby2AnimationDuration = 1.3;
+            break;
+        case 'impossible':
+            babyAnimationDuration = 1;
+            baby2AnimationDuration = 1.1;
+            break;
+        default:
+            break;
+    }
+}
+
+
 
 function moveBackground() {
     const gameElement = document.getElementById("game");
@@ -26,9 +51,13 @@ function updateScore() {
     document.getElementById("score_count").textContent = counter;
 }
 
- function startGame() {
+ function startGame(difficulty) {
+         setDifficultyLevel(difficulty);
+
             document.getElementById("welcome-screen").style.display = "none";
             document.getElementById("game").style.display = "block";
+       document.getElementById("baby").style.animation = `move ${babyAnimationDuration}s linear infinite`;
+    document.getElementById("baby2").style.animation = `move ${baby2AnimationDuration}s linear infinite`;
         }
 
 
