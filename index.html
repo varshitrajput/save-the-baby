@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save the baby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="welcome-screen" onclick="startGame()">
+         <img src="blue.png" alt="">
+        <h1>Save The Baby</h1>
+        <p>Tap to start the game</p>
+    </div>
+    <div id="game" style="display: none;">
+        <div id="score-display">Score: <span id="score_count">0</span></div>
+        <div id="baby"><img src="blue.png" alt=""></div>
+        <div id="baby2"><img src="blue.png" alt=""></div>
+        <div id="baby3"><img src="black.png" alt=""></div>
+
+        <div id="bmw"><img src="race.png" alt=""></div>
+        <div id="bmw2"><img src="race.png" alt=""></div>
+
+    </div>
+    <div id="result">
+        <h1>Game Over</h1>
+        <p id="score"></p>
+        <button id="btn" onclick="location.reload()">Restart</button>
+    </div>
+
+    <audio id="jumpsound" src="jumpsound.mp3"></audio>
+    <audio id="squishsound" src="squishsound.mp3"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
