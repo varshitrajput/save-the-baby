@@ -50,7 +50,6 @@ blueCar2.addEventListener("animationiteration", function(){
 blueCar3.addEventListener("animationiteration", function(){
     var random = ((Math.floor(Math.random() * 4)) * 100)
     blueCar3.style.left = random + "px";
-    counter = counter - 2;
     updateScore()
 })
 
